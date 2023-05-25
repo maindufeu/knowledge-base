@@ -8,9 +8,17 @@
 
 **Social graph:** this is a graph supposed to save different social interactions to have in mind
 
-<img src="attachments/graph.png" width=100 align="left">
+<img src="attachments/graph.png" width=500 align="center">
 
 **Live graph:** this is the way the graph gets operationalized
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
 
 ## Using Foam
 
