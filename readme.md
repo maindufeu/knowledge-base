@@ -6,7 +6,9 @@
 
 ## Getting started
 
-**Social graph:**
+**Social graph:** this is a graph supposed to save different social interactions to have in mind
+
+**Live graph:** this is the way the graph gets operationalized
 
 ## Using Foam
 
