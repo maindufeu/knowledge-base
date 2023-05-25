@@ -13,11 +13,11 @@
 **Live graph:** this is the way the graph gets operationalized
 
 ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+graph TD
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
 ```
 
 ## Using Foam
@@ -27,6 +27,7 @@ We've created a few Bubbles (Markdown documents) to get you started.
 - [inbox](./inbox.md) - a place to write down quick notes to be categorized later
 - [getting-started](./getting-started.md) - learn how to use your Foam workspace
 - [todo](./todo.md) - a place to keep track of things to do
+- [mermaid](./mermaid.md)
 
 In the `docs` directory you can find everything you need to learn the basics of Foam.
 
