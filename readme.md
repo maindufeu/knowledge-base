@@ -12,7 +12,7 @@
 
 **Live graph:** this is the way the graph gets operationalized
 
-<img src="attachments/graph1.png" width=500 align="center">
+<img src="attachments/graph1.png" width=200 align="center">
 
 ## Using Foam
 
