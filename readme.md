@@ -1,34 +1,321 @@
-<img src="attachments/foam-icon.png" width=100 align="left">
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FAI-ML-Lab%2Fresources%2Fmain%2Fproperties.json&query=%24.repo.ac_llm%5B0%5D.version&logo=bitbucket&label=version&labelColor=1A3B47) ![version from json](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FAI-ML-Lab%2Fresources%2Fmain%2Fproperties.json&query=%24.repo.ac_llm%5B%3F(%40.version%20%3D%3D%20'0.1.0')%5D.usos&label=usos%20en%20proyecto&labelColor=1A3B47) ![website](https://img.shields.io/website/http/ailyn.link?&labelColor=1A3B47&label=demo) [![Email me](https://img.shields.io/badge/Email%20me-1A3B47)](mailto:eejimenez@minsait.com) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EgAr7ZjzZe1DdlqQsHluX20i5GCZu_rV?usp=sharing) ![language](https://img.shields.io/badge/language-python-blue)
+[![Download as PDF Button](https://img.shields.io/badge/Download%20%20pdf-EF3939?style=flat&logo=adobeacrobatreader&logoColor=white&color=black&labelColor=ec1c24)](https://mdtopdf.up.railway.app/convertPdf?url=https://raw.githubusercontent.com/AI-ML-Lab/resources/main/Readme.md)
+<p align="center">
+<img src="images/wh.png"width=20%>
+<p align="center" href=>
+    <img src="images/m_dimensiones.gif"width=7%>
+    <img src="images/m_lab.png" width=30%>
+<p align="center">
+<img src="images/wh.png"width=10%>
 
-# Knowledge Base
+![banner](images/m_banner-acllm.png)
 
-**👋 Bienvenido a Knowledge Base!**
+<a name="toc"></a>
 
-## Getting started
 
-**Social graph:** this is a graph supposed to save different social interactions to have in mind
+[![benchmark](images/card_benchmark.png)](#bench) [![seguridad](images/card_seguridad.png)](#sec) [![licencias](images/card_licencias.png)](#lic)[![integraciones](images/card_integraciones.png)](#int) [![costos](images/card_costos.png)](#cost) [![referencias](images/card_referencias.png)](#ref) [![referencias](images/card_tiempo.png)](#acel)
 
-<img src="attachments/graph.png" width=500 align="center">
+<a name="ap"></a>
+## **Aplicaciones**
 
-**Live graph:** this is the way the graph gets operationalized
+Las aplicaciones de este acelerador se dividen en e 3:
 
-<img src="attachments/graph1.png" width=200 align="center">
+- **Out of the box**: Ejemplos mínimos que ayuden a entender las capacidades de los modelos de lenguajes en diferentes frameworks 
+- **Casos particulare**s (Demos): asistentes inteligentes que pueden responder preguntas a través de búsqueda en bases de datos vectoriales construidas a partir de datos estructurados (SQL,CSV, txt, PDF, jsons) 
+- **Herramientas**: Interfaces y funciones que ayudan a la implementación de proyectos relacionados
 
-## Using Foam
+### Out of the box [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/10VJRNKdt9cGKIgtyxb0yWDdVVkPbhEX-?usp=sharing)
 
-We've created a few Bubbles (Markdown documents) to get you started.
+- Traducción
+- Análisis de sentimiento
+- Resumen
+- Paráfrasis
+- Corrección sintáctica
+- Evaluación de reglas
 
-- [inbox](./inbox.md) - a place to write down quick notes to be categorized later
-- [getting-started](./getting-started.md) - learn how to use your Foam workspace
-- [todo](./todo.md) - a place to keep track of things to do
-- [mermaid](./mermaid.md)
+![Alt text](images/ref_t5-capabilities.png){width=500}
 
-In the `docs` directory you can find everything you need to learn the basics of Foam.
+### Casos de uso particulares
+     
 
-![[todo]]
+![MIA](images/ap_mia.png){width=30 height=30} **Asistente para planeación de viajes y reservaciones** [![try me](https://img.shields.io/badge/Try%20me-Whatsapp-brightgreen?logo=whatsapp)](https://api.whatsapp.com/send/?phone=5215573747795&text&type=phone_number&app_absent=0) [![repo](https://img.shields.io/badge/demo-blue?logo=bitbucket)](https://bitbucket.indra.es/projects/GT_PLAIMX/repos/de_mia-langchain) 
 
-## Submitting Issues
+![aeromexico](images/ap_aeromexico.png){width=30 height=30} **Recuperación de información de pasajeros** [![repo](https://img.shields.io/badge/proyecto-blue?logo=bitbucket)](https://bitbucket.indra.es/projects/GT_PLAIMX/repos/pr_aeromexico-pronostico/browse)
 
-As you may have noticed, issues are disabled. With the goal to keep the project fairly easy to maintain, please file your issues in the main Foam repository:
 
-> <https://github.com/maindufeu/knowledge-base>
+### Herramientas [![repo](https://img.shields.io/badge/proyecto-blue?logo=bitbucket)](https://bitbucket.indra.es/projects/GT_PLAIMX/repos/de_llm)
+
+Aplicación para entrenamiento semi supervisado de modelos de lenguaje
+
+<a name="bench"></a>
+## Benchmark
+[:arrow_up:](#toc)
+
+Si bien no existe una metodología de comparación de LLMs dominante o probada existen algunos referentes en la indsutria que nos ayudan a tener una idea del performance general que llevan los modelos que se van generando evaluandolos en diferentes tareas. Para esto el que mantiene más actividad por ser una evaluación automática es [AlpacaEval](https://github.com/tatsu-lab/alpaca_eval/tree/main) y [MosaicML](https://www.mosaicml.com/llm-evaluation) puedes ver su [score](https://docs.google.com/spreadsheets/d/e/2PACX-1vSAwA8-DdEgGHlbX1XkP7KoYWQD2HzKDGsID33MypM17FsjVw5YmT4ceUK-ryfH4jL9jBW8u1DTGWuS/pubhtml#) en tiempo real.
+
+<p align="center">
+    <img src="images/ref_mosaic-eval.png" width=40%>
+    <img src="images/ref_benchmark.png" width=30%>
+
+### Performance
+Sin embargo podemos evaluar lo siguiente a grandes rasgos:
+
+- **Conocimiento del Mundo:** capacidad para responder preguntas sobre una amplia variedad de temas con exactitud.
+
+- **Sentido Común:** capacidad de realizar tareas de razonamiento básico e inferencias utilizando conocimiento del sentido común.
+
+- **Comprensión del Lenguaje:** comprensión de los modelos en idiomas, traducciones y resolución de anáforas.
+
+- **Resolución de Problemas Simbólicos:** resolución de diversas tareas como aritmética, lógica y algoritmos.
+
+- **Comprensión de Lectura:** Precisión de respuestas a preguntas basadas en textos proporcionados.
+
+- **Programación:** Evaluación de la comprensión y generación de código funcional por parte de los modelos.
+
+En función del caso de uso lo más recomendable es usar métricas personalizadas que incluyan la proporción de aciertos al realizar la tarea predefinida en el template,o la tasa de alucinaciones que son generadas o incluso independientemente de la respuesta del modelo y sus posibles alucinaciones el número de veces que se completó la tarea satisfactoriamente usando un modelo de evaluación con otro llm o con una calificación humana que sirva de reforzamiento.
+
+Un ejemplo de caso de uso es, si la tarea es generar una query que permita hacer una consulta sobre un nombre o un lugar en particular el número de fallas que se registraron al hacer esas querys
+
+
+## Modelo elegido para acelerar
+
+**Llama2** 🦙
+
+<a name="lic"></a>
+## Licenciamiento
+[:arrow_up:](#toc)
+
+Los modelos de Llama están disponibles bajo una licencia que permite su uso en proyectos comerciales sin embargo no es estrictamente Open Source.
+
+Llama 2 está licenciado bajo la LLAMA 2 Community License, Copyright (c) Meta Platforms, Inc. que se resume en lo siguiente:
+
+1. **Derechos de redistribución**: Es una licencia no exclusiva, mundial, no transferible y libre de regalías para usar, reproducir, distribuir, copiar, crear obras derivadas y modificar los Materiales de Llama
+2. **Terminos adicionales**: si los usuarios activos son mayores a 700 millones al mes se debe pedir un permiso a Meta para hacer uso de Llama y sus derivados
+3. **Garantía**: No posee ninguna garantía de funcionamiento
+4. **No responsabilidad**: En caso de negligencia, daño o mal uso Meta no se responsabiliza
+5. **Propiedad intelectual**: Los productos derivados de Llama son propiedad de quien los crea
+
+Por lo tanto, la licencia de Meta para los modelos y código de LLaMa no cumple con este estándar de OSD; específicamente, pone restricciones al uso comercial para algunos usuarios y también restringe el uso del modelo y software para ciertos propósitos (la Política de Uso Aceptable).
+
+## Relevancia del OSD
+
+* Un licencia de código abierto garantiza que los desarrolladores y usuarios puedan decidir por sí mismos cómo y dónde usar la tecnología sin necesidad de interactuar con otra parte; tienen soberanía sobre la tecnología que usan.
+* El código abierto se basa en el entendimiento de que todos pueden compartir sin importar quién seas.
+
+<a name="int"></a>
+## Integraciones
+[:arrow_up:](#toc)
+
+Algunos frameworks disponbiles para trabajar con LLMs son:
+
+| Proyecto        | Descripción                                                                                                 |
+|-----------------|-------------------------------------------------------------------------------------------------------------|
+| [Alpaca Farm ](https://github.com/tatsu-lab/alpaca_farm/)    | AlpacaFarm es un framework de reforzamiento humana. Contiene código para simular retroalimentación de preferencias, evaluación automatizada y algoritmos de aprendizaje por refuerzo como PPO.                                                                                                                             |
+| [Flax](https://flax.readthedocs.io/en/latest/)            | Flax es una biblioteca de redes neuronales para JAX que proporciona operaciones de diferenciación y vectorización en python con el que se han construido modelos de lenguaje visión y multimodales como Palm                                                                                                           |
+| [GGML](https://github.com/ggerganov/ggml)            | GGML es framwork para cuantizar LLMs y hacerlos más ligeros. Bibliotecas populares basadas en GGML incluyen llama.cpp y whisper.cpp.                                                                                               |
+| [Hugging Face](https://huggingface.co/models?other=LLM)    | Ofrece una amplia biblioteca de Transformers y Demos de LLMs para probar la mayoría de ellos.                                                                                                          |
+| [Lamini](https://github.com/lamini-ai/lamini)          |Permite el ajuste fino, RLHF y optimizaciones para que el LLM autohospedado funcione de manera eficiente.                                                                                                                     |
+| [LangChain](https://python.langchain.com/docs/get_started/introduction.html)       | LangChain proporciona módulos para modelos, estímulos, índices, cadenas y agentes, con la capacidad de "encadenar" estos módulos entre sí.                                                                                                                           |
+| [LlamaIndex](https://github.com/jerryjliu/llama_index)      | Permite integrar datos privados/personalizados con conectores de datos, índices/gráficos compatibles con LLM y una interfaz de consulta sobre los datos.                                                                                                                                     |
+| [LMFlow](https://github.com/OptimalScale/LMFlow/blob/main/readme/README_es.md)          | Framework de integración y ajuste de LLM y visión orientado a tareas. Soporta estructuras comunes como LLaMA y GPT-2.                                                                                                                                         |
+| [MLC LLM](https://github.com/mlc-ai/mlc-llm)         | MLC LLM permite que se desplieguen LLMs nativamente en hardware y aplicaciones como en iOS, Android, Apple Silicon, AMD, Intel, NVIDIA y WebGPU.                                                             |
+
+
+Dependiendo de la aplicación podemos optar por diferentes plataformas y arquitecturas sin embargo podemos encontrar algunos patrones en la construcción de aplicaciones con LLMs que podemos clasificar como en el siguiente diagrama
+
+<p align="center">
+    <img src="images/ref_patterns.png" width=50%>
+
+- Evals: métricas de performance
+- [RAG](https://learn.microsoft.com/en-us/azure/machine-learning/concept-retrieval-augmented-generation?view=azureml-api-2): (Retrieval Augmented Generation) agregar información reciente
+- Fine-tuning: mejorar en tareas específicas
+- Caching: almacenamiento para reducir costos y latencia
+- Guardrails: estrategias de contensión para mejorar la calidad de las salidas
+- Defensive UX: Anticipar y manejar posibles errores desde el UX
+- Collect user feedback: Generar un sistema de recomendación
+
+Hasta ahora sólo se ha probado la integración con langchain por su facilidad para hacer estrategias de caché, ux defensivo y filtros de calidad, también debido a la documentación y facilidad de integración temprana sin embargo a 6 meses de la presentación de chatGPT ya hay herramientas de bajo costo para hacer fine tuning. Esto puede traer los siguientes beneficios:
+
+- **Rendimiento y control**: mejorando el rendimiento de un modelo base listo para usar e incluso superar a un LLM de terceros. También proporciona un mayor control sobre el comportamiento del LLM, lo que resulta en un sistema o producto más robusto. En general, el fine-tuning nos permite crear productos que se diferenciadores.
+- **Modularización**: El fine-tuning de una sola tarea nos permite utilizar un ejército de modelos más pequeños que se especializan cada uno en sus propias tareas. como moderación de contenido, extracción, resumen, etc. Además, dado que cada modelo solo tiene que centrarse en un conjunto de tareas limitado, hay menos preocupación de que el fine-tuning de un modelo en una tarea reduce el rendimiento en otras tareas.
+- **Reducción de dependencias**: Al alojar nuestros propios modelos, podemos reducir las preocupaciones legales sobre los datos de propiedad (por ejemplo, PII, documentos internos y código) que se exponen a las API externas y evita las restricciones que vienen con los LLM de terceros, como el límite de velocidad, los altos costos o los filtros de seguridad demasiado restrictivos. 
+
+Este es el esquema básico de construcción de aplicaciones en caché
+<p align="center">
+    <img src="images/ref_gptcache.jpg" width=50%>
+
+Sin embargo para mejorar la precisión del modelo tenemos algunas opciones:
+
+- Hacer fine-tunning de un modelo existente entrenándolo con data propia
+- Cuantizar un modelo más grande que ayude a mantener el uso de recursos y tiempo con una mayor precisión
+- Usar un sheperd intermedio que haga una evaluación de la respuesta final y la refine
+- Mejorar nuestra búsqueda intermedia en la base de datos vectorial 
+
+Si el modelo usado es local y hay tiempo en el proyecto un fine tuning podría parecer la opción más evidente sin embargo es un proyecto en si mismo y es necesario dedicar teimpo a validar extensivamente el dataset con el que se va a ajustar el modelo siendo una opción sólo para casos particulares donde ningún modelo preentrenado tenga un dominio específico sobre el tema y este no pueda ser contenido por la búsqueda en la base de datos vectorial.
+
+En caso de que no seea una posibilidad modificar el modelo podemos optar por cambiar de motor de búsqueda o generar un sheperd que ayude a refinar las respuestas.
+
+Algunos detalles sobre los sheperds disponibles pueden revisarse [aquí](https://arxiv.org/pdf/2308.04592.pdf).
+
+Algunas opciones de búsqueda de datos vectorial que hemos usado son [FAISS(META)](https://ai.meta.com/tools/faiss/), [Chroma](https://www.trychroma.com/), [Pinecone](https://www.pinecone.io/) y [Qdrant](https://qdrant.tech/).
+
+Algunas de las diferencias esenciales son:
+
+| | Chroma    | Pinecone            | FAISS | Qdrant | 
+|- |---------|-----------------------|--|--|
+| PROS | Facilidad de uso y deployment | Plataforma multiherramienta  |Facilidad de uso|Velocidad de búsqueda|
+| CONTRAS | Performance en los resultados | Precio  |Tiempo de búsqueda|Es necesario levantar una API de consumo|
+
+Es posible ver la implementación de la API de consumo en Quadrant [aquí](https://glowing-space-trout-p7976jg5w6qc7qxg.github.dev/)
+
+Es posible ver un ejemplo de uso de chroma [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EgAr7ZjzZe1DdlqQsHl1X20i5GCZu_rV?usp=sharing)
+
+
+
+<a name="esc"></a>
+## Escalabilidad
+[:arrow_up:](#toc)
+
+Dado que los Llms los podemos pensar en dos sentidos de integración ahondaremos enn las posibilidades de escalar ambos escenarios.
+
+En el primero hacemos un uso de la API de OpenAI con los siguientes rate limits:
+
+<p align = "center">
+    <img src="images/ref_ratelimit-openai.png"width=30%>
+
+para los modelos más antiguos tenemos las siguientes equivalencias de tokens:
+
+| Type    | 1TPM                  |
+|---------|-----------------------|
+| davinci | 1 token per minute    |
+| curie   | 25 tokens per minute  |
+| babbage | 100 tokens per minute |
+| ada     | 200 tokens per minute |
+
+Estas limitaciones son a nivel organización y no a nivel usuario o key por lo que para un proyecto que requiera llevarse a productivo considerando conversaciones coocurrentes sería necesario utilizar varios modelos para evitar saturar los rate limits con pocos usuarios. Un escenario de ejemplo podría considerarse el siguiente:
+
+Para una consulta en el asistente **MIA** se utilizan 3 requests a la API de OpenAI:
+
+1. Una para determinar el comportamiento esperado y enrutar al agente necesario.
+2. Otra para refrasear el input original para devolver un input que pueda ser comprendido por la API de Maps
+3. Una tercera que dado el contexto devuelto por la API y el contexto de la conversación responda adecuadamente a la pregunta
+
+> Esto es significa que para responder una sola pregunta utiliza entre 500 y 1000 tokens dependiendo de la longitud del contexto. Por lo tanto una interacción común con MIA que puede requerir varias consultas o preguntas usa entre 500 hasta 10,000 tokens y unas 30 requests por usuario. Es claro que dado que los tiempos de latencia y escritura de los usuarios finales el número de consultas por minuto puede variar pero si tomáramos una sola consulta por usuario al mismo tiempo llegaríamos al límite con 500 usuarios en el escenario más favorable
+
+
+$700tokens \times 500users = 350,000TPM$
+
+En este escenario hay dos posibilidades para facilitar su escalabilidad, la primera es utilizar una variedad de modelos para finalidades distintas así podríamos aprovechar el rate limit por modelo, el siguiente sería utilizar un modelo propio como Llama2 y una tercera opción sería encolar los usuairos simnultaneos para poder distribuir el número de llamadas
+>:warning: La integración con Composer o algún pipeline basado en DAGs no se recomienda en ninguno de los dos casos como una implementación punta a punta sino sólamente para el proceso de reentrenamiento ya que al hacer un escalamiento dinámico horizontal la carga de los modelos y en caso de requerirlo el entrenamiento se haría en cada pod de procesamiento lo cuál implicaría un costo de entrenamiento duplicado y tiempos más largos de inferencia. Es preferible en todo caso para esta tarea un escalado vertical siempre y cuando se cuente con un modelo propio cargado en local
+
+
+### Arquitecturas
+
+La demo de MIA está montada en flask en una instancia de **EC2** que apunta a un dominio en **route53** con un certificado SSL de **ACM** ya que la API de whatsapp necesita que la información que va al webhook viaje a través de una conexión https. Para escalar esta demo no sólo tenemos rate limits de consumo en las APIs sino limitantes de tráfico en una instancia **EC2**. Las pruebas que se han generado con Apache Benchmark nos dicen que un servidor de ec2 puede manejar 250 llamadas concurrentes con un tiempo promedio de respuesta de 86 milisegundos sin embargo deja de responder ante 450 llamadas concurrentes.
+
+
+
+<p align = "center"><strong>Comparativa de arquitecturas</strong>
+<p align = "center">
+    <img src="images/arq_demo-mia.png"width=20%>
+    <img src="images/wv.png"width=5%>
+    <img src="images/arq_elb.png" width=30%>
+
+<p align = "center">
+    <img src="images/screen_loadtest-ec2.png"width=29%>
+    <img src="images/wv.png"width=5%>
+    <img src="images/screen_loadtest-elb.png" width=30%>
+
+
+Al colocar un balanceador de carga observamos que las métricas de respuesta se conservan sin embargo con dos instancias se pueden manejar hasta 750 llamadas concurrentes por el balanceador de carga.
+
+Esto es muy parecido a la propuesta de una arquitectura de beanstalk toma como ejemplo de buena arquitectura para una aplicación de flask en su [documentación](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html) 
+
+<p align="center">
+    <img src="images/arq_beanstalk.png">
+
+Sin embargo algunas alternativas de escalabilidad y portabilidad con un servicio de IaC puede ser un despliegue con **AWS CDK** y **FastAPI** como la de abajo que también explica detalladamente aws en sus ejemplos de [well architecture](https://aws.amazon.com/es/blogs/machine-learning/deploy-a-serverless-ml-inference-endpoint-of-large-language-models-using-fastapi-aws-lambda-and-aws-cdk/). Esta ademas de ser muy portable tiene la bondad de que cada conversación levanta una única función lambdas que tiene sirve de enrutador para un modelo largo de lenguaje hacia las consultas a diferentes APIs y cumple con requerir poca RAM y poco tiempo de procesamiento por llamada. haciendo que la escalabilidad sea mayor por diseño y más económico en costos de servidor
+
+<p align="center">
+    <img src="images/arq_aws-cdk.png">
+
+La elección de la arquitectura a utilizar será en función de las necesidades de escalabilidad, familiaridad con la infraestructura y tiempo de implementación y configuración necesarias
+
+<a name="sec"></a>
+## Seguridad
+[:arrow_up:](#toc)
+
+El modelo Llama2 con sus pesos puede descargarse en local por lo que es posible aislar el componente de lenguaje del tráfico de Open-Web facilitando ajustarse a los lineamientos de ciberseguridad del cliente. 
+No se han detectado vulnerabilidades comunes en la librería de langchain aunque si ineficiencias en el uso de los tokens ya que para hacer uso de la memoria hace un almacenamiento recursivo que usa como contexto y en conversaciones largas puede afectar seriamente el funcionamiento y los recursos de cómputo disponibles
+
+### Research & References
+
+Llama 2
+
+> :heavy_check_mark: Se han descargado los modelos llama7b y el fine tuning de llama2 7b-chat así como el modelo Llama2 70b-chat es posible revisar mayor información en la [página oficial](https://ai.meta.com/llama/)
+  
+<a name="cost"></a>
+## Costo de implementación
+[:arrow_up:](#toc)
+
+
+### Tiempo de desarrollo 
+
+2 meses
+
+### Tiempo ahorrado en creación de demos
+
+1 mes
+
+<a name="ref"></a>
+#### Artículos
+[:arrow_up:](#toc)
+
+[Sharepoint](https://indra365.sharepoint.com/:f:/r/sites/Grp_T_Hub_AAI_LatAm-AILab/Documentos%20compartidos/Art%C3%ADculos?csf=1&web=1&e=dPLezJ)
+
+
+
+<p align="center">
+    <img src="images/m_bottom.png"
+    width=95%>
+
+<a name="repo"></a>
+## Árbol de repositorio
+[:arrow_up:](#toc)
+```
+│   image.png
+│   Readme.md
+│
+├───images
+│       ap_aeromexico.png
+│       ap_mia.png
+│       arq_aws-cdk.png
+│       arq_beanstalk.png
+│       arq_demo-mia.png
+│       arq_elb.png
+│       card_benchmark.png
+│       card_costos.png
+│       card_integraciones.png
+│       card_licencias.png
+│       card_referencias.png
+│       card_seguridad.png
+│       card_tiempo.png
+│       m_ailab.png
+│       m_banner-acllm.png
+│       m_bottom.png
+│       m_dimensiones.gif
+│       m_lab.png
+│       ref_benchmark.png
+│       ref_gptcache.jpg
+│       ref_mosaic-eval.png
+│       ref_patterns.png
+│       ref_ratelimit-openai.png
+│       screen_loadtest-ec2.png
+│       screen_loadtest-elb.png
+│       wh.png
+│       wv.png
+│
+└───notebooks
+        Fine_tune_a_language_model.ipynb
+        llm metrics.ipynb
+```
